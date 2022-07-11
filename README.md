@@ -1,0 +1,1 @@
+lets get started by finding the main routes of this application.
