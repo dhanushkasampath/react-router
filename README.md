@@ -7,3 +7,5 @@ lets get started by finding the main routes of this application.
 we have to implement below behaviour.
 if not query params get the quotes list as it is.
 if there is query params as ?order=asc, then sort accordingly.
+
+http://localhost:3000/quotes/q1/comments

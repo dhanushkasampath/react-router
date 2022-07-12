@@ -1,4 +1,4 @@
-import {Route, useParams} from "react-router-dom";
+import {Link, Route, useParams} from "react-router-dom";
 import {Fragment} from "react";
 import Comments from "../components/comments/Comments";
 import HighlightedQuote from "../components/quotes/HighlightedQuote";
@@ -22,6 +22,11 @@ const QuoteDetail = () => {
             <HighlightedQuote text={quote.text} author={quote.author}/>
             {/*<h1>Quote Detail Page</h1>*/}
             {/*<p>{params.quoteId}</p>*/}
+            <Route path={`/quotes/${params.quoteId}`} exact>
+                <div className='centered'>
+                    <Link className='btn--flat' to={`/quotes/${params.quoteId}/comments`}>Load Comments</Link>
+                </div>
+            </Route>
             <Route path={`/quotes/${params.quoteId}/comments`}>
                 {/*now Comments component will load if the url is http:localhost:3000/quotes/123/comments */}
                 <Comments/>
