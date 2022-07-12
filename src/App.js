@@ -3,6 +3,7 @@ import AllQuotes from "./pages/AllQuotes";
 import QuoteDetail from "./pages/QuoteDetail";
 import NewQuote from "./pages/NewQuote";
 import Layout from "./components/layout/Layout";
+import NotFound from "./pages/NotFound";
 
 function App() {//routes goes from top to bottom. since switch is there it stops when it found a match
   return (
@@ -19,6 +20,10 @@ function App() {//routes goes from top to bottom. since switch is there it stops
           </Route>
           <Route path='/new-quote'>
             <NewQuote/>
+          </Route>
+          {/*this wild card route should be at the bottom as the last step*/}
+          <Route path='*'>
+            <NotFound/>
           </Route>
         </Switch>
       </Layout>
