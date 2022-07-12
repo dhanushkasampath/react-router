@@ -7,7 +7,7 @@ const NewQuote = () => {
 
     const addQuoteHandler = quoteData => {
         console.log(quoteData)
-        history.push('/quotes');
+        history.push('/quotes');//this is called programmatic navigation.
     }
     return (
         <QuoteForm onAddQuote={addQuoteHandler}/>
